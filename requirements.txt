@@ -1,5 +1,8 @@
-# Core packages
+# Core
 Flask==2.3.2
+gunicorn==21.2.0
+
+# ML & Data
 numpy==1.26.4
 pandas==2.2.2
 scikit-learn==1.4.2
@@ -10,25 +13,13 @@ matplotlib==3.8.4
 seaborn==0.13.2
 plotly==5.21.0
 
-# HTML templating and form support
-jinja2==3.1.3
-
-# For map and location handling
+# Location & Mapping (optional)
 geopy==2.4.1
 
-# For saving/loading model
-pickle-mixin==1.0.2
-
-# For reading json/location files
-json5==0.9.24
-
-# Optional: SQLite or data persistence
+# Database (optional)
 SQLAlchemy==2.0.30
 
-# Optional: If using OpenAI or AI assistant
-# openai==1.30.1
-# nltk==3.8.1
+# Production/Rendering
+jinja2==3.1.3
 
-# Deployment utilities
-gunicorn==21.2.0  # Required if deploying on Render or Heroku
 
