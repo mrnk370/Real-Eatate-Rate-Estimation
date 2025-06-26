@@ -1,0 +1,21 @@
+<!-- Step 3: Trend Page (templates/trend.html) -->
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="card shadow p-4" data-aos="fade-left">
+    <h2 class="mb-4 text-center">📊 Price Trend Analysis</h2>
+    <form method="post" action="/trend">
+        <div class="mb-3">
+            <label for="location" class="form-label">Enter Location</label>
+            <input type="text" name="location" class="form-control" placeholder="e.g., Whitefield" required>
+        </div>
+        <button type="submit" class="btn btn-outline-primary w-100">View Trend</button>
+    </form>
+
+    {% if plot_url %}
+    <div class="mt-4 text-center">
+        <img src="data:image/png;base64,{{ plot_url }}" class="img-fluid rounded border" alt="Trend Graph">
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
